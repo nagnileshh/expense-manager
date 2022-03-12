@@ -25,6 +25,11 @@ const raw_expenses = [
 ];
 
 function App() {
+
+  fetch("http://localhost/index1.php")
+      .then((response) => response.json())
+      .then((data) => console.log(data))
+
   const [expenseList, setexpenseList] = useState(raw_expenses);
 
   const addExpenseHandler = (expense) => {
